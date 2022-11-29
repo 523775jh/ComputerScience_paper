@@ -1,2 +1,2 @@
-# Computer Science papar
+# Computer Science paper
 Duplicate Detection of Webshop Products
