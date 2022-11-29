@@ -1,2 +1,2 @@
-# ComputerScience_papaer
+# Computer Science papar
 Duplicate Detection of Webshop Products
