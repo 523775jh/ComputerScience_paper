@@ -1,5 +1,5 @@
-## Scalable Product Duplicate Detection
-# Jiayao Hu (523775)
+# Scalable Product Duplicate Detection
+### Jiayao Hu (523775)
 
 This code in this file name 'PaperCode.py' contains several functions, which will be called at the end to 
 compute the performance. In the following, an overview is given for the functions and a brief explanation of its use.
