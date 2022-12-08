@@ -1,5 +1,7 @@
 # Scalable Product Duplicate Detection
 ### Jiayao Hu (523775)
+In the past decades, the number of webshops has increased rapidly, along with the growth of the number of products sold on these platforms. This has resulted in similar products sold across different websites, where it is possible that different shops provide different information; for example the price could differ across shops. To get the lowest price, consumers must consider each product separately, which is extremely time-consuming. By aggregating the products, this task is performed more efficiently. For this duplicate detection is necessary. The aim of this paper is to produce a scalable solution for product duplicate detection. This is performed by applying Locality Sensitive Hashing (LSH) since this method can reduce the computation time and the number of comparisons to make.
+
 
 This code in this file name 'PaperCode.py' contains several functions, which will be called at the end to 
 compute the performance. In the following, an overview is given for the functions and a brief explanation of its use.
