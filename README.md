@@ -173,22 +173,30 @@ run_bootstrap(dataset):
             test, all the lists/matrices etc. for test
     
 clustering(all_dissim_matrix, modelID, t):
+    Obtaining the clusters
+
     Input: all_dissim_matrix, dissimilarity matrix
            modelID, ID of the TV
            t, distance threshold
     Output: all_clusts, the labels of the clusters
     
 real_dups(ID):
+    The total number of real duplicates in the dataset
+
     Input: ID, list of modelIDs
     Output: real_duplicates, the number of real duplicates in the given list
     
 pair_compare_LSH(all_cands, ID):
+    To compute the number of real duplicates found by LSH and the number of comparisons made in the progress
+
     Input:  all_cands, the candidate pairs obtained by LSH 
             ID, list of modelIDs
     Output: number_compare_LSH, number of comparisons made by LSH 
             pairs_LSH, the number of duplicates found by LSH 
     
 LSH_measures(pairs, compares, real, max_comp):
+    To compute the performance measures of LSH
+
     Input:  pairs, the number of duplicates found by LSH 
             compares, number of comparisons made by LSH 
             real, the total number of real duplicates 
@@ -199,6 +207,8 @@ LSH_measures(pairs, compares, real, max_comp):
             F1_star, harmonic mean between PC and PQ
 
 clust_measures(all_clusters, real_duplicates):
+    To compute the performance measures of clustering
+
     Input:  all_clusters, the labels of the clusters
             real_duplicates, the total number of real duplicates
     Output: pairs_clust, the number of duplicates found by clustering 
@@ -209,6 +219,8 @@ clust_measures(all_clusters, real_duplicates):
             F_1, harmonic mean between precision and recall
     
 high_f1(F_1, thres_list):
+    Function to obtain the highest F1-score with different distance thresholds
+    
     Input: F_1, list with all the F1-scores 
            thres_list, list with all the tried distance thresholds
     Output: highest_f1, the highest F1-score
