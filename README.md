@@ -165,13 +165,53 @@ dissimilarity(all_cands, input_matrix, N):
            N, the number of products 
     Output: all_dissim_mat, all dissimiliarity matrices  
     
+run_bootstrap(dataset):
+    Generate the required output from the above defined funcions
     
+    Input: dataset, the data
+    Output: training, all the lists/matrices etc. for training
+            test, all the lists/matrices etc. for test
     
+clustering(all_dissim_matrix, modelID, t):
+    Input: all_dissim_matrix, dissimilarity matrix
+           modelID, ID of the TV
+           t, distance threshold
+    Output: all_clusts, the labels of the clusters
     
+real_dups(ID):
+    Input: ID, list of modelIDs
+    Output: real_duplicates, the number of real duplicates in the given list
     
+pair_compare_LSH(all_cands, ID):
+    Input:  all_cands, the candidate pairs obtained by LSH 
+            ID, list of modelIDs
+    Output: number_compare_LSH, number of comparisons made by LSH 
+            pairs_LSH, the number of duplicates found by LSH 
     
+LSH_measures(pairs, compares, real, max_comp):
+    Input:  pairs, the number of duplicates found by LSH 
+            compares, number of comparisons made by LSH 
+            real, the total number of real duplicates 
+            max_comp, the maximum number of comparisons
+    Output: PC, number of duplicates found divided by the total number of real duplicates 
+            PQ, number of duplicates found divided by the number of comparisons made 
+            frac_LSH, the fraction of comparisons
+            F1_star, harmonic mean between PC and PQ
+
+clust_measures(all_clusters, real_duplicates):
+    Input:  all_clusters, the labels of the clusters
+            real_duplicates, the total number of real duplicates
+    Output: pairs_clust, the number of duplicates found by clustering 
+            number_compare_clust, number of comparisons made by clustering
+            recall, number of duplicates found divided by the total number of real duplicates 
+            precision, number of duplicates found divided by the number of comparisons made 
+            frac_clust, the fraction of comparisons 
+            F_1, harmonic mean between precision and recall
     
-    
-    
+high_f1(F_1, thres_list):
+    Input: F_1, list with all the F1-scores 
+           thres_list, list with all the tried distance thresholds
+    Output: highest_f1, the highest F1-score
+            threshold, the distance threshold that gives the highest F1-score
     
     
