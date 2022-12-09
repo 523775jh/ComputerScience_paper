@@ -528,14 +528,18 @@ F1mean = F1mean/len(all_PC_test)
 thres_mean = np.mean(all_thresholds)
 
 #%%
-for i in range(len(all_frac_LSH_test[0])):
-    plt.plot(all_frac_LSH_test[i], all_PC_test[i], label ='Pair completeness')
-    plt.xlabel('Fraction of comparison')
-    plt.ylabel('Pair completeness')
+plt.plot(all_frac_LSH_test[0], all_PC_test[0], label ='Pair completeness')
+plt.xlabel('Fraction of comparison')
+plt.ylabel('Pair completeness')
 plt.show()
 
-for i in range(len(all_frac_LSH_test[0])):
-    plt.plot(all_frac_LSH_test[i], all_PQ_test[i], label ='Pair quality')
-    plt.xlabel('Fraction of comparison')
-    plt.ylabel('Pair quality')
-plt.show() 
+plt.plot(all_frac_LSH_test[0], all_PQ_test[0], label ='Pair quality')
+plt.xlabel('Fraction of comparison')
+plt.ylabel('Pair quality')
+plt.show()
+
+plt.plot(all_frac_LSH_test[0], all_F1_test[0][0])
+plt.xlabel('Fraction of comparison')
+plt.ylabel('F1-measure')
+plt.show()
+    
