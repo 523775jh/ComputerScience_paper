@@ -9,7 +9,6 @@ import matplotlib.pyplot as plt
 from math import comb
 import sys
 from sklearn.cluster import AgglomerativeClustering
-import itertools as it
 
 np.random.seed(1)
 
